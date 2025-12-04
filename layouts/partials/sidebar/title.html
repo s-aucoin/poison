@@ -5,9 +5,9 @@
                 <img src="{{ .Site.Params.remote_brand_image }}" alt="brand image">
             </a>
         {{ else if .Site.Params.brand_image }}
-            <a href="{{ .Site.BaseURL }}">
-                <img src="{{ .Site.Params.brand_image }}" alt="brand image">
-            </a>
+                 <a href="{{ .Site.BaseURL }}">
+                   <img src="{{ .Site.Params.brand_image | relURL }}" alt="brand image">
+                 </a>
         {{ end }}
         {{ if .Site.Params.brand }}
             <a href="{{ .Site.BaseURL }}">
